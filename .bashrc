@@ -22,11 +22,36 @@ Magenta="\[\033[0;35m\]"
 Cyan="\[\033[0;36m\]"
 White="\[\033[0;37m\]"
 
+# username colour
+case $(id -u) in
+    0)
+        UserColour=$Red;
+        ;;
+    *)
+        UserColour=$Blue;
+        ;;
+esac
+
+# git tools
+. /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash;
+. /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh;
+
+# git tools options
+GIT_PS1_SHOWDIRTYSTATE="yes"
+GIT_PS1_SHOWSTASHSTATE="yes"
+GIT_PS1_SHOWUNTRACKEDFILES="yes"
+GIT_PS1_SHOWUPSTREAM="auto"
+
+# git tools prompt
+if [ "\$(type -t __git_ps1)" ]; then
+    Branch="\$(__git_ps1 ' (%s)')"
+fi
+
 # customize prompt
 if [ "$SSH_CONNECTION" == "" ]; then
-    PS1="$Blue\u$White@$Green\h$White:\w>$ColourOff "
+    export PS1="$UserColour\u$White@$Green\h$White:\w$Branch$White>$ColourOff "
 else
-    PS1="$Blue\u$White@$Yellow\h$White:\w>$ColourOff "
+    export PS1="$UserColour\u$White@$Yellow\h$White:\w$Branch$White>$ColourOff "
 fi
 
 # editor preference
