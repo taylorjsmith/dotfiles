@@ -7,6 +7,7 @@
 alias ls='ls -hG'
 
 # ls aliases
+alias sl='ls'
 alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -al'
@@ -23,9 +24,6 @@ alias bye='clear;exit'
 alias byebye='clear;logout'
 
 # interactive aliases
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
 alias mkdir='mkdir -p'
 
 # SSH aliases
@@ -38,7 +36,7 @@ alias uwstudent='ssh tj2smith@linux.student.cs.uwaterloo.ca'
 alias innovate='ssh tsmith@innovate.cs.queensu.ca'
 
 # software aliases
-alias maple='/Library/Frameworks/Maple.framework/Versions/2016/bin/maple'
+alias maple='/Library/Frameworks/Maple.framework/Versions/Current/bin/maple'
 
 # miscellaneous aliases
 alias h='history'
