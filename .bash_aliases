@@ -36,7 +36,6 @@ alias uwlinux='ssh tj2smith@linux.cs.uwaterloo.ca'
 alias uwlinux-X='ssh -X tj2smith@linux.cs.uwaterloo.ca'
 alias uwstudent='ssh tj2smith@linux.student.cs.uwaterloo.ca'
 alias innovate='ssh tsmith@innovate.cs.queensu.ca'
-alias torus='ssh tsmith@torus.cs.queensu.ca'
 
 # software aliases
 alias maple='/Library/Frameworks/Maple.framework/Versions/2016/bin/maple'
@@ -44,7 +43,6 @@ alias maple='/Library/Frameworks/Maple.framework/Versions/2016/bin/maple'
 # miscellaneous aliases
 alias h='history'
 alias where='pwd'
-alias which='type -a'
 alias du='du -kh'
 alias df='df -kh'
 
