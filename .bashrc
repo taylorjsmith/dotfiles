@@ -11,6 +11,11 @@ if [ -f ~/.bash_aliases ]; then
 . ~/.bash_aliases;
 fi
 
+# source bash_functions file
+if [ -f ~/.bash_functions ]; then
+. ~/.bash_functions;
+fi
+
 # ANSI colour codes
 ColourOff="\[\033[0m\]"
 Black="\[\033[0;30m\]"

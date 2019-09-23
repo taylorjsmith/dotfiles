@@ -9,7 +9,7 @@
 # variables
 dir=~/.dotfiles             # dotfiles directory
 olddir=~/.dotfiles_old      # old dotfiles backup directory
-files=".bash_aliases .bash_profile .bashrc .gitconfig .gitignore .vim .vimrc"
+files=".bash_aliases .bash_functions .bash_profile .bashrc .gitconfig .gitignore .vim .vimrc"
 
 # create .dotfiles_old directory if it does not exist already
 if [ ! -d $olddir ]; then
