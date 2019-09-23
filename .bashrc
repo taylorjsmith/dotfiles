@@ -22,16 +22,6 @@ Magenta="\[\033[0;35m\]"
 Cyan="\[\033[0;36m\]"
 White="\[\033[0;37m\]"
 
-# username colour
-case $(id -u) in
-    0)
-        UserColour=$Red;
-        ;;
-    *)
-        UserColour=$Blue;
-        ;;
-esac
-
 # git tools
 . /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash;
 . /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh;
@@ -49,9 +39,11 @@ fi
 
 # customize prompt
 if [ "$SSH_CONNECTION" == "" ]; then
-    export PS1="$UserColour\u$White@$Green\h$White:\w$Branch$White>$ColourOff "
+    export PS1="$Blue\u$White@$Green\h$White:\w$Branch$White>$ColourOff "
+    export SUDO_PS1="$Red\u$White@$Green\h$White:\w$White>$ColourOff "
 else
-    export PS1="$UserColour\u$White@$Yellow\h$White:\w$Branch$White>$ColourOff "
+    export PS1="$Blue\u$White@$Yellow\h$White:\w$Branch$White>$ColourOff "
+    export SUDO_PS1="$Red\u$White@$Yellow\h$White:\w$White>$ColourOff "
 fi
 
 # editor preference
