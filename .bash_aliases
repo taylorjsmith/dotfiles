@@ -6,6 +6,9 @@
 # coloured ls
 alias ls='ls -hG'
 
+# coloured grep
+alias grep='grep --color=auto'
+
 # ls aliases
 alias sl='ls'
 alias ll='ls -l'
@@ -27,6 +30,7 @@ alias byebye='clear;logout'
 alias mkdir='mkdir -p'
 
 # SSH aliases
+alias webserver='ssh taylorjs@taylorjsmith.xyz -p 27'
 alias gate='ssh tsmit55@gate.csd.uwo.ca'
 alias obelix='ssh tsmit55@obelix.gaul.csd.uwo.ca'
 alias obelix-X='ssh -X tsmit55@obelix.gaul.csd.uwo.ca'
@@ -37,6 +41,9 @@ alias innovate='ssh tsmith@innovate.cs.queensu.ca'
 
 # software aliases
 alias maple='/Library/Frameworks/Maple.framework/Versions/Current/bin/maple'
+alias news='newsboat'
+alias pip='pip3'
+alias python='python3'
 
 # miscellaneous aliases
 alias h='history'
