@@ -6,8 +6,8 @@
 set nocompatible            "no vi compatibility mode
 syntax enable               "enable syntax highlighting
 
-"set background=dark        "set background
-"colorscheme solarized      "set colour scheme
+set background=dark         "set background
+colorscheme solarized       "set colour scheme
 
 filetype plugin indent on   "enable filetype indenting
 
@@ -27,3 +27,7 @@ set softtabstop=4           "set tab stop width
 set smarttab                "use tabs at beginning of line, spaces elsewhere
 set tabstop=4               "set tab stop width
 set t_vb=                   "disable screen flashing
+
+"enable italic text in MacOS terminal
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
